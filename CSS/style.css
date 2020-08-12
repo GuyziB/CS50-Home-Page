@@ -10,12 +10,12 @@ Tin - #828081  rgba(130, 128, 129, 1)
     --main-text-color: rgba(30, 57, 42, 1)
 }
 
-head {
+header {
     background-color: var(--main-bg-color)
     font-family: "Rubik", sans-serif, serif;
-    text-align: center;
+    /* text-align: center; */
     width: 100%;
-    position: fixed;
+    /* position: fixed; */
 }
 
 body {
