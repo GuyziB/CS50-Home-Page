@@ -6,20 +6,52 @@ Light - #e9c893  rgba(233, 200, 147, 1)
 Tin - #828081  rgba(130, 128, 129, 1)
 */
 :root {
-    --main-bg-color: #f3f3f3;
-    --main-text-color: rgba(30, 57, 42, 1)
+    --main-bg-color: Black;
+    --main-text-color: White;
 }
 
 header {
     background-color: var(--main-bg-color)
     font-family: "Rubik", sans-serif, serif;
-    /* text-align: center; */
+    text-align: center;
     width: 100%;
     /* position: fixed; */
 }
 
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.logo {
+    float: left;
+}
+
+.header_list {
+    float: right;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    list-style-position: inside;
+}
+
+.header_list_item {
+    display: inline-block;
+    margin: 20px;
+    margin-top: 40px;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.header_list_item a {
+    color: White;
+    text-decoration: none;
+}
+
 body {
-    font-family: "Rubik", sans-serif, serif;
-    color: var(--main-text-color);
     background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+    font-family: "Rubik", sans-serif, serif;
 }
