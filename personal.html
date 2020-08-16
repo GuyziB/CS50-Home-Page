@@ -11,39 +11,124 @@
         <link rel="stylesheet" href="./CSS/style.css" type="text/css">
 
         <title>Guy Baranyay's Webpage</title>
+
+<!-- JAVASCRIPT PART -->
+<script type="text/javascript">
+    var modal = document.getElementById("my_modal");
+    var image = document.getElementById("dad_img");
+    var modalImg = document.getElementById("img01");
+    var caption_text = document.getElementById("caption");
+
+    img.onclick = function() {
+        modal.style.display = block;
+        modalImg.src = this.scr;
+        caption_text.innerHTML = this.alt;
+    }
+
+// Get the span element that closes the MODAL
+var span = document.getElementByClassName("close")[0];
+
+span.onclick = function() {
+    modal.style.display = none;
+}
+
+</script>
+
     <head>
 
     <header class="header">
-            <img src="./guylogo_signature.png" alt="GuyziB Logo" class="logo">
+        <div class="header_container">
 
-        <ul class="header_list">
-            <li class="header_list_item"><a href="index.html">Splash</a></li>
-            <li class="header_list_item"><a href="personal.html">Personal</a></li>
-            <li class="header_list_item"><a href="professional.html">Professional</a></li>
-            <li class="header_list_item"><a href="places.html">Places</a></li>
-            <li class="header_list_item"><a href="my_network.html">My Networks</a></li>
-        </ul>
+            <img src="./signature.png" alt="GuyziB Logo" class="logo">
+
+            <ul class="header_list">
+                <li class="header_list_item" id="splash"><a href="index.html">Splash</a></li>
+                <li class="header_list_item" id="personal"><a href="personal.html">Personal</a></li>
+                <li class="header_list_item" id="prefessional"><a href="professional.html">Professional</a></li>
+                <li class="header_list_item" id="places"><a href="places.html">Places</a></li>
+                <li class="header_list_item" id="my_networks"><a href="my_network.html">My Networks</a></li>
+            </ul>
+        </div>
     </header>
 
-    <body>
-        <h2>I'm here, "Just a regular GUY!"</h2>
-        <p>Is that fair? Am I just a regular guy?</p>
-        <ul>
-            <li>Dad</li>
-            <li>Husband</li>
-            <li><a href="sports.html">Sports Enthusiast</a></li>
-            <li>Generalist</li>
-            <li>Gemini</li>
-            <li><a href="#secrets">Secrets</a></li>
-        </ul>
-        <p> I am an ENGINEER, but one with a passion for the ENTERTAINMENT industry. Can you get more Gemini in terms of that contradiction? I am Dad with all the love for my kids. BUT, I have always had my own, in many ways, selfish life. And I love the time away from them, and my wife. But I also spend plenty of time with them. I am, in actual fact, not good with folk that only live for their kids, or only live for their work.(Never give up your own passions, BTW.) Too many old people end up without interests, I don't think that'll happen to me. Look here, I am learning a little CS for my sins. Why? I have no idea. Where will it lead? I also have no idea. But it's fun. I love to learn stuff, but being a generalist, it's always quite surface knowledge. Oh, and I am also, not a huge fan of LAZY SUNDAYS. What a waste!</p>
-        <h3>Quotes that shed some light on me...</h3>
-        <ul class = "quotes">
-            <li>"Work Hard, Play Hard." - Thanks Mum, she taught this to me early. And it stuck.</li>
-            <li>“The man on top of the mountain didn't fall there.” ― Vince Lombardi.</li>
-            <li>"Good is the enemy of great." - I first heard this from a friend called Mark. It's not an original, I know that. But he told me first.</li>
-            <li>"Federer is the GOAT" - not a quote, just adding my voice to a debate that will range for ever. </li>
-        </ul>
-        <p id="secrets">Did you know: I love those behind the scenes interactions between sporting greats, or between sporting greats and the press. Not the sham shit that they show on sporting news. The stuff when they sitting down, or walking out the door. Or when somehow, they lose their cool and go "off script" as it were. Eddie Jones is a classic at this. If I find a link, I'll put it here.</p>
+    <img src="./dad.jpg" alt="Guy and Kids" id="dad_img">
+    <img src="./husband.jpg" alt="Guy and Hails" id="husband_img">
+
+    <div class="modal" id="my_modal">
+        <span class="close">&times;</span>  <!-- The Close Button-->
+        <img class="modal_content" id="img01">  <!-- Modal Content - the image-->
+        <div id="caption"></div>  <!--Modal Caption-->
+    </div>
+
+    <body class="page_mask">
+        <h1 class="h1_center">I'm here, "Just a regular GUY!"<br><small>Is that fair? Am I just a regular guy?</small></h1>
+        <div class="container page_mask">
+            <div class="row">
+                <div class="col-md">
+                    <h2>Family Man <br> <small>South African</small></h2>
+                    <ul class="body_list list-group">
+                        <li class="list-group-item">Dad</li>
+                        <li class="list-group-item">Husband</li>
+                        <li class="list-group-item"><a href="sports.html">Sports Enthusiast</a></li>
+                        <li class="list-group-item">Generalist</li>
+                        <li class="list-group-item">Gemini</li>
+                        <li class="list-group-item"><a href="#secrets">Secrets</a></li>
+                    </ul>
+                    <p> I am an ENGINEER, but one with a passion for the ENTERTAINMENT industry. Can you get more Gemini in terms of that contradiction? I am Dad with all the love for my kids. BUT, I have always had my own, in many ways, selfish life. And I love the time away from them, and my wife. But I also spend plenty of time with them. I am, in actual fact, not good with folk that only live for their kids, or only live for their work.(Never give up your own passions, BTW.) Too many old people end up without interests, I don't think that'll happen to me. Look here, I am learning a little CS for my sins. Why? I have no idea. Where will it lead? I also have no idea. But it's fun. I love to learn stuff, but being a generalist, it's always quite surface knowledge. Oh, and I am also, not a huge fan of LAZY SUNDAYS. What a waste!</p>
+                    <h3>Quotes that shed some light on me...</h3>
+                    <ul class = "quotes list-group">
+                        <li class="list-group-item">"Work Hard, Play Hard." - Thanks Mum, she taught this to me early. And it stuck.</li>
+                        <li class="list-group-item">“The man on top of the mountain didn't fall there.” ― Vince Lombardi.</li>
+                        <li class="list-group-item">"Good is the enemy of great." - I first heard this from a friend called Mark. It's not an original, I know that. But he told me first.</li>
+                        <li class="list-group-item">"Federer is the GOAT" - not a quote, just adding my voice to a debate that will range for ever. </li>
+                    </ul>
+                    <p id="secrets">Did you know: I love those behind the scenes interactions between sporting greats, or between sporting greats and the press. Not the sham shit that they show on sporting news. The stuff when they sitting down, or walking out the door. Or when somehow, they lose their cool and go "off script" as it were. Eddie Jones is a classic at this. If I find a link, I'll put it here.</p>
+                </div>
+
+                <div class="col-md">
+                    <h2>Sports Enthusiast<br><small>Couch Expert Thoughts</small></h1>
+                    <p>Over the years, the sports enthusiast in me has changed. That's natural I suppose. I used to play and watch it all. I loved it all, except soccer. I have never been able to watch soccer. Sure the big occasions, everyone watches. And live, soccer is certainly more entertaining than on the TV. But no, that's a tricky one for me. It's always on, and I really don't like watching it.</p>
+                    <p>So these days of wall to wall sport...14 channels here in South Africa. There are so many space filling options that are just rubbish. Match up for match up sakes. I have started to cut back on the viewing. (The generalist coming through again!) I love watching cycling. Precentage wise, I have gone from 0% about 10 years back to at most opportunities these days. I love the one day classics, mountain days in the grand tours and the road world champs. Love the downhill mountain biking and event track championships.</p>
+                    <p>I love watching the big events. The swimming at the olympics, rugby world cup, mens 100m at a world champs. When reputations are at stake, I'm in.</p>
+                    <p>The golf majors are also cool. Tricky though, because I live in South Africa and only The Open is within our timezone. One of my great sporting memories is during my run from Johannesburg to Cape Town, the masters 'Monday' was on. 2019 - Tiger won. I was on this great adventure to Cape Town; my own challenge of sorts. Then there is Tiger making one of the greatest comebacks in sport. The following vehicle with my teammates shouting that Molinari was imploding. I got back into the combi and a non-golfer carried on running while we watched the last 9 holes. What a day that was! </p>
+                    <h3 style="text-align: center">Top 5 TV Sporting Moments <br>(Last 20 years or so.)</h3>
+                    <ul class="body_list list-group">
+                        <li class="list-group-item"><a href="https://www.youtube.com/watch?v=vDCGGMv50EQ">In your LIFE, have you seen anything like that - Tiger Woods</a></li>
+                        <li class="list-group-item"><a href="https://www.youtube.com/watch?v=WIiSJhXud7A">Makazole Mapimpi</a></li>
+                        <li class="list-group-item"><a href="https://www.youtube.com/watch?v=r_bsF884gpE&t=137s">Ernie Els - 17th @ Congressional in 1997</a></li>
+                        <li class="list-group-item"><a href="https://www.youtube.com/watch?v=43iS3Fs9Ohs">Steve Kerr - Chicago Bulls</a></li>
+                        <li class="list-group-item"><a href="https://www.youtube.com/watch?v=mccKzTdfXts&list=PLRbp3j84FF4tdi7r7nRJg0XWDJSIYo_nN&index=49">Blowing Up The Giro - Chris Froome</a></li>
+                    </ul>
+                    <h2>An Enthusiastic Participant</h2>
+                    <p>I have some ball sense, and an OK engine ... and I can balance. Also I can swim well. (Top Tip: If you want to swim well, start young.) This meant that from a young age I tried nearly everything to do with sports. And I loved most of them.</p>
+                    <p>But I will just list what I think went well, and not in any great detail either.</p>
+                    <h3>Team Sports</h3>
+                    <p>Team sports were my first love. I mean, I was good a swimming and would definately have been more competitive in that arena but I prefered playing 3rd team cricket with my friends. So I managed to convince my folks to tell my swimming coach in high school to leave me alone and a career in sports mediocrity was born. In the grand scheme of things, it was the correct choice. Maybe I could have done with the whole tough love thing at that point.</p>
+                    <ul class="body_list list-group">
+                        <li class="list-group-item">Barnes Hockey - What a great time we had over the years in London. Best of friends forged in the lower divs of the Surrey hockey leagues.</li>
+                        <li class="list-group-item">Camps Bay Tennis - Not a huge part of my life, but had I not moved from Cape Town up to Johannesburg I would still be playing tennis with The Vulture and Co.</li>
+                        <li class="list-group-item">One80 Mutisport - Triathon is an individual game, but boy does it help when a teammate is on the side of the road, or passes nearby on the run. Plus the coffee after a long run. Awesome</li>
+                    </ul>
+                    <h3>Individulal Achievements</h3>
+                    <p>Not much here, but I'll list them for posterity stakes. I don't really remember the times in great detail.</p>
+                    <ul class="body_list list-group">
+                        <li class="list-group-item">Ironman / Ironman Distance Events - 6 - Best : 10hrs 30 mins</li>
+                        <li class="list-group-item">Comrades Ultra Marathon 90km - 2 (never again) - Best : 9hrs 50mins</li>
+                        <li class="list-group-item">MAD2RUN - Johannesburg to Cape Town - 1 - Distance 200km in 7 days</li>
+                        <li class="list-group-item">Many Marathons</li>
+                        <li class="list-group-item">Countless Half Marathons</li>
+                        <li class="list-group-item">Many Half Distance Triathons</li>
+                        <li class="list-group-item">Many Cups of Coffee</li>
+                    </ul>
+                    <h3>Best Part: End of Season Parties</h3>
+                    <h3>Worst Part: Getting Old</h3>
+                    <h3>Goal: Fast After 50 - again, it's a book. Not an original</h3>
+                </div>
+            </div>
+        </div>
+
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     </body>
 </html>

@@ -6,14 +6,30 @@ Light - #e9c893  rgba(233, 200, 147, 1)
 Tin - #828081  rgba(130, 128, 129, 1)
 */
 :root {
-    --main-bg-color: Black;
-    --main-text-color: White;
+    --forest: rgba(30, 57, 42, 1);
+    --tin: rgba(130,128,129,.5);
+    --electric: rgba(60, 196, 124, 1);
+    --light: rgba(233, 200, 147, 1);
+    --f3: #f3f3f3;
+}
+
+body {
+    font-family: "Rubik", sans-serif, serif;
+    /* background-image: linear-gradient(0deg, var(--f3), var(--tin));
+    background-color: var(--f3);
+    background-size: cover;
+    background-position: center; */
+    background-color: var(--tin);
+    color: var(--forest);
+}
+
+html, body, .mask, .page_mask {
+    height: 97%;
 }
 
 header {
-    background-color: var(--main-bg-color)
+    background-color: var(--tin);
     font-family: "Rubik", sans-serif, serif;
-    text-align: center;
     width: 100%;
     /* position: fixed; */
 }
@@ -24,8 +40,14 @@ header::after {
   clear: both;
 }
 
+.header_container{
+    margin: 0 auto;
+    width: 90%
+}
+
 .logo {
     float: left;
+    padding: 5px 0;
 }
 
 .header_list {
@@ -38,20 +60,174 @@ header::after {
 
 .header_list_item {
     display: inline-block;
-    margin: 20px;
-    margin-top: 40px;
+    margin-left: 15px;
+    margin-top: 30px;
     position: relative;
     text-transform: uppercase;
-    font-size: 14px;
+    font-weight: lighter;
 }
 
 .header_list_item a {
-    color: White;
+    color: var(--f3);
     text-decoration: none;
 }
 
-body {
-    background-color: var(--main-bg-color);
-    color: var(--main-text-color);
-    font-family: "Rubik", sans-serif, serif;
+.header_list_item a:hover {
+    color: var(--forest);
+}
+
+.header_list_item a::before {
+  content: '';
+  display: block;
+  height: 2px;
+  background-color: var(--forest);
+  /* position: absolute; */
+  /* top: -10px; */
+  width: 0%;
+  transition: all ease-in-out 250ms;
+}
+
+.header_list_item a:hover::before {
+    width: 100%;
+}
+
+.mask {
+    background-image: url("../background.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.h1_mask, .h3_mask {
+    margin: 0;
+    font-size: 100px;
+    text-align: center;
+    /* display: block; */
+    width: 100%;
+    height: 110%;
+    position: relative;
+    top: -50px;
+    /* background-color: rgba(233,200,147,.4); */
+    /* z-index: 2; */
+}
+
+.h3_mask {
+    margin: 0;
+    font-size: 36px;
+    font-style: italic;
+    text-align: center;
+}
+
+.page_mask {
+    /* background-image: linear-gradient(0deg, var(--f3), var(--tin)); */
+    background-color: var(--f3);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.h1_center {
+    text-align: center;
+    padding: 25px;
+}
+
+h2, h3 {
+    text-align: center;
+    border: 1px solid var(--tin);
+    border-radius: 10px;
+    background-color: var(--tin);
+    padding: 10px;
+}
+
+.body_list, .quotes {
+    border: 1px;
+    border-color: var(--f3);
+    border-radius: 4px;
+    padding: 10px;
+    margin: 0px 0px 10px 0px;
+}
+
+.list-group-item {
+    background-color: var(--forest);
+    color: var(--light);
+}
+
+.list-group-item:nth-child(odd) {
+    background-color: var(--light);
+    color: var(--forest);
+}
+
+.list-group-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* CHECK */
+#dad_img {
+    border-radius:  10px;
+    /* cursor: pointer;
+    transition: .3s; */
+}
+
+#dad_img:hover {
+    opacity: .7;
+}
+
+/* The Modal Background */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    /* padding-top: 100px */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: var(--electric);
+}
+
+.modal_content {
+    margin-left: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: var(--forest);
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation to the Modal */
+.modal_content, #caption {
+    animation-name: zoom;
+    animation-duration: .6s;
+}
+
+@@keyframes zoom {
+    from {transform: scale(0);}
+    to {transform: scale(1);}
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: var(--electric);
+    font-size: 30px;
+    transition: .3s;
+}
+
+.close:hover, .close:focus {
+    color: var(--forest);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
 }
