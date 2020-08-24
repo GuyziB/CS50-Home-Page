@@ -6,35 +6,12 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
         <link rel="stylesheet" href="./CSS/style.css" type="text/css">
 
         <title>Guy Baranyay's Webpage</title>
-
-<!-- JAVASCRIPT PART -->
-<script type="text/javascript">
-    var modal = document.getElementById("my_modal");
-    var image = document.getElementById("dad_img");
-    var modalImg = document.getElementById("img01");
-    var caption_text = document.getElementById("caption");
-
-    img.onclick = function() {
-        modal.style.display = block;
-        modalImg.src = this.scr;
-        caption_text.innerHTML = this.alt;
-    }
-
-// Get the span element that closes the MODAL
-var span = document.getElementByClassName("close")[0];
-
-span.onclick = function() {
-    modal.style.display = none;
-}
-
-</script>
-
-    <head>
+    </head>
 
     <header class="header">
         <div class="header_container">
@@ -51,37 +28,35 @@ span.onclick = function() {
         </div>
     </header>
 
-    <img src="./dad.jpg" alt="Guy and Kids" id="dad_img">
-    <img src="./husband.jpg" alt="Guy and Hails" id="husband_img">
-
-    <div class="modal" id="my_modal">
-        <span class="close">&times;</span>  <!-- The Close Button-->
-        <img class="modal_content" id="img01">  <!-- Modal Content - the image-->
-        <div id="caption"></div>  <!--Modal Caption-->
-    </div>
+    <!-- <img src="./dad.jpg" alt="Guy and Kids" id="dad_image">
+    <img src="./husband.jpg" alt="Guy and Hails" id="husband_image"> -->
 
     <body class="page_mask">
-        <h1 class="h1_center">I'm here, "Just a regular GUY!"<br><small>Is that fair? Am I just a regular guy?</small></h1>
+
+        <h1 class="h1_center">"Just a regular GUY!"<br><small>Is that fair?<br>Am I just a regular guy?</small></h1>
+
         <div class="container page_mask">
             <div class="row">
                 <div class="col-md">
                     <h2>Family Man <br> <small>South African</small></h2>
                     <ul class="body_list list-group">
-                        <li class="list-group-item">Dad</li>
-                        <li class="list-group-item">Husband</li>
+                        <li class="list-group-item"><a href="./dad.jpg" class="popup" onClick="return popup(this, 'Dad')">Dad</li>
+                        <li class="list-group-item"><a href="./husband.jpg" class="popup" onClick="return popup(this, 'Husband')">Husband</li>
                         <li class="list-group-item"><a href="sports.html">Sports Enthusiast</a></li>
                         <li class="list-group-item">Generalist</li>
                         <li class="list-group-item">Gemini</li>
                         <li class="list-group-item"><a href="#secrets">Secrets</a></li>
                     </ul>
+
                     <p> I am an ENGINEER, but one with a passion for the ENTERTAINMENT industry. Can you get more Gemini in terms of that contradiction? I am Dad with all the love for my kids. BUT, I have always had my own, in many ways, selfish life. And I love the time away from them, and my wife. But I also spend plenty of time with them. I am, in actual fact, not good with folk that only live for their kids, or only live for their work.(Never give up your own passions, BTW.) Too many old people end up without interests, I don't think that'll happen to me. Look here, I am learning a little CS for my sins. Why? I have no idea. Where will it lead? I also have no idea. But it's fun. I love to learn stuff, but being a generalist, it's always quite surface knowledge. Oh, and I am also, not a huge fan of LAZY SUNDAYS. What a waste!</p>
-                    <h3>Quotes that shed some light on me...</h3>
+                    <h3>Quotes... (words to live by)</h3>
                     <ul class = "quotes list-group">
                         <li class="list-group-item">"Work Hard, Play Hard." - Thanks Mum, she taught this to me early. And it stuck.</li>
                         <li class="list-group-item">“The man on top of the mountain didn't fall there.” ― Vince Lombardi.</li>
                         <li class="list-group-item">"Good is the enemy of great." - I first heard this from a friend called Mark. It's not an original, I know that. But he told me first.</li>
                         <li class="list-group-item">"Federer is the GOAT" - not a quote, just adding my voice to a debate that will range for ever. </li>
                     </ul>
+
                     <p id="secrets">Did you know: I love those behind the scenes interactions between sporting greats, or between sporting greats and the press. Not the sham shit that they show on sporting news. The stuff when they sitting down, or walking out the door. Or when somehow, they lose their cool and go "off script" as it were. Eddie Jones is a classic at this. If I find a link, I'll put it here.</p>
                 </div>
 
@@ -120,12 +95,23 @@ span.onclick = function() {
                         <li class="list-group-item">Many Half Distance Triathons</li>
                         <li class="list-group-item">Many Cups of Coffee</li>
                     </ul>
-                    <h3>Best Part: End of Season Parties</h3>
-                    <h3>Worst Part: Getting Old</h3>
-                    <h3>Goal: Fast After 50 - again, it's a book. Not an original</h3>
+                    <h3>Best Part<br><small>End of Season Parties</small></h3>
+                    <h3>Worst Part<br><small>Getting Old</small></h3>
+                    <h3>Goal<br><small>Fast After 50!<br>(Again, it's a book. Not an original!)</small></h3>
                 </div>
             </div>
         </div>
+
+<!-- Attempting to POP up a picture. -->
+        <button data-modal-target="#modal">Open Modal</button>
+        <div class="modal" id="modal">
+            <button class="modal_close">&times;</button>  <!-- The Close Button-->
+            <img src="./dad.jpg" alt="Guy and Kids" class="modal_picture" id="dad_img">  <!-- Modal Content - the image-->
+            <div id="modal_caption">Guy & Kids</div>  <!--Modal Caption-->
+        </div>
+
+<!-- This is for masking the page when modal clicked -->
+        <div class="modal_overlay"></div>
 
             <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
             <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
