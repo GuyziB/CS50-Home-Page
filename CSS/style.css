@@ -92,7 +92,7 @@ header::after {
 }
 
 .mask {
-    background-image: url("../background.jpg");
+    background-image: url("../image/background.jpg");
     background-size: cover;
     background-position: center;
     display: flex;
@@ -170,4 +170,15 @@ p {
 .list-group-item a {
     text-decoration: none;
     color: inherit;
+}
+
+
+#header_popup{
+  width:75%;
+  margin:0 auto;
+}
+
+#header_popup iframe{
+  width:100%;
+  margin:0 auto;
 }

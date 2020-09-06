@@ -6,7 +6,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
         <link rel="stylesheet" href="./CSS/style.css" type="text/css">
 
@@ -16,7 +16,7 @@
     <header class="header">
         <div class="header_container">
 
-            <img src="./signature.png" alt="GuyziB Logo" class="logo">
+            <img src="./image/signature.png" alt="GuyziB Logo" class="logo">
 
             <ul class="header_list">
                 <li class="header_list_item" id="splash"><a href="index.html">Splash</a></li>
@@ -28,9 +28,6 @@
         </div>
     </header>
 
-    <!-- <img src="./dad.jpg" alt="Guy and Kids" id="dad_image">
-    <img src="./husband.jpg" alt="Guy and Hails" id="husband_image"> -->
-
     <body class="page_mask">
 
         <h1 class="h1_center">"Just a regular GUY!"<br><small>Is that fair?<br>Am I just a regular guy?</small></h1>
@@ -40,8 +37,8 @@
                 <div class="col-md">
                     <h2>Family Man <br> <small>South African</small></h2>
                     <ul class="body_list list-group">
-                        <li class="list-group-item"><a href="./dad.jpg" class="popup" onClick="return popup(this, 'Dad')">Dad</li>
-                        <li class="list-group-item"><a href="./husband.jpg" class="popup" onClick="return popup(this, 'Husband')">Husband</li>
+                        <li class="list-group-item"><a href="./image/dad.jpg" class="popup" onClick="return popup(this, 'Dad')">Dad</a></li>
+                        <li class="list-group-item"><a href="./image/husband.jpg" class="popup" onClick="return popup(this, 'Husband')">Husband</a></li>
                         <li class="list-group-item"><a href="sports.html">Sports Enthusiast</a></li>
                         <li class="list-group-item">Generalist</li>
                         <li class="list-group-item">Gemini</li>
@@ -68,7 +65,7 @@
                     <p>The golf majors are also cool. Tricky though, because I live in South Africa and only The Open is within our timezone. One of my great sporting memories is during my run from Johannesburg to Cape Town, the masters 'Monday' was on. 2019 - Tiger won. I was on this great adventure to Cape Town; my own challenge of sorts. Then there is Tiger making one of the greatest comebacks in sport. The following vehicle with my teammates shouting that Molinari was imploding. I got back into the combi and a non-golfer carried on running while we watched the last 9 holes. What a day that was! </p>
                     <h3 style="text-align: center">Top 5 TV Sporting Moments <br>(Last 20 years or so.)</h3>
                     <ul class="body_list list-group">
-                        <li class="list-group-item"><a href="https://www.youtube.com/watch?v=vDCGGMv50EQ">In your LIFE, have you seen anything like that - Tiger Woods</a></li>
+                        <!-- <li class="list-group-item"><a href="#header_popup" id="header_video_link" target="_blank" class="btn btn-outline-danger popup-modal">In your LIFE, have you seen anything like that - Tiger Woods</a></li> -->
                         <li class="list-group-item"><a href="https://www.youtube.com/watch?v=WIiSJhXud7A">Makazole Mapimpi</a></li>
                         <li class="list-group-item"><a href="https://www.youtube.com/watch?v=r_bsF884gpE&t=137s">Ernie Els - 17th @ Congressional in 1997</a></li>
                         <li class="list-group-item"><a href="https://www.youtube.com/watch?v=43iS3Fs9Ohs">Steve Kerr - Chicago Bulls</a></li>
@@ -101,17 +98,9 @@
                 </div>
             </div>
         </div>
-
-<!-- Attempting to POP up a picture. -->
-        <button data-modal-target="#modal">Open Modal</button>
-        <div class="modal" id="modal">
-            <button class="modal_close">&times;</button>  <!-- The Close Button-->
-            <img src="./dad.jpg" alt="Guy and Kids" class="modal_picture" id="dad_img">  <!-- Modal Content - the image-->
-            <div id="modal_caption">Guy & Kids</div>  <!--Modal Caption-->
-        </div>
-
-<!-- This is for masking the page when modal clicked -->
-        <div class="modal_overlay"></div>
+        <!-- <div id="header_popup" class="mfp-hide embed-responsive embed-responsive-21by9">
+            <iframe class="embed-responsive-item" width="854" height="480" src="https://www.youtube.com/watch?v=vDCGGMv50EQ?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div> -->
 
             <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
             <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
